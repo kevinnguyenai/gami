@@ -1,20 +1,19 @@
 /*
-	Asterisk Gateway Interface support
+Asterisk Gateway Interface support
 
-	Usage:
+Usage:
 
-		a := agi.NewAgi()
-		r := a.Answer()
-		checkErr(r.Err)
-		...
-		r = a.Noop("Hello New Chan")
-		...
-		r = a.SayAlpha("Hi")
-		...
-		r, status := a.ChannelStatus()
-		...
-		r.Hangup()
-
+	a := agi.NewAgi()
+	r := a.Answer()
+	checkErr(r.Err)
+	...
+	r = a.Noop("Hello New Chan")
+	...
+	r = a.SayAlpha("Hi")
+	...
+	r, status := a.ChannelStatus()
+	...
+	r.Hangup()
 */
 package agi
 
@@ -132,7 +131,7 @@ func (a *Agi) WaitForDigit(wait int) (*Resp, int) {
 	pattern := regexp.MustCompile("^\\d+\\s*result=(\\d+)")
 	groups := pattern.FindStringSubmatch(resp.Payload)
 	ascii, _ := strconv.Atoi(groups[1])
-	digit, _ := strconv.Atoi(string(ascii))
+	digit, _ := strconv.Atoi(strconv.Itoa(ascii))
 	return resp, digit
 }
 
