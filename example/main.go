@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	gami "github.com/KevinAtLeap/gami"
+	gami "github.com/kevinnguyenai/gami"
 )
 
 var (

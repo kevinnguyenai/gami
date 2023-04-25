@@ -1,4 +1,4 @@
-module github.com/KevinAtLeap/gami
+module github.com/kevinnguyenai/gami
 
 go 1.20
 
