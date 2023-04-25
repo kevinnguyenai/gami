@@ -1,11 +1,12 @@
 package main
 
 import (
-	gami "code.google.com/p/gami"
 	"flag"
 	"fmt"
 	"log"
 	"net"
+
+	gami "github.com/KevinAtLeap/gami"
 )
 
 var (
