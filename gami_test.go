@@ -4,13 +4,14 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	check "gopkg.in/check.v1"
 	"net"
 	"os"
 	"strings"
 	"sync"
 	"testing"
 	"time"
+
+	check "gopkg.in/check.v1"
 )
 
 var integration = flag.Bool("run-integration", false, "run integration tests")
